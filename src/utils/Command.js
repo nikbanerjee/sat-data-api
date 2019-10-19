@@ -35,18 +35,6 @@ class Command {
                     return;
                 }
 
-                // try {
-                //     let data = JSON.parse(stdout);
-
-                //     // TODO: status code handling needs work...
-                //     if (data.statusCode >= 400)
-                //         reject(new Error(data.message, data.status));
-                // } catch {
-                //     // helm API 'helpfully' returns an HTML error page...
-                //     console.error('stdout:', stdout);
-                //     reject(new Error('Unknown error encountered parsing stdout', 500));
-                // }
-
                 resolve(stdout);
             });
         });

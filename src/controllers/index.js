@@ -7,8 +7,9 @@ module.exports = {
         let satellite = new SatelliteData(true)
 
         return new Promise((resolve, reject) => {
-            resolve(satellite.getSatellite('https://www.n2yo.com/satellite/?s=25544'))
-        }).then(() => {
+            resolve(satellite.getSatellite('https://www.n2yo.com/satellite/?s=33591'))
+        }).then((data) => {
+            console.log(data)
             return res.status(200).send('ok')
         })
     },
