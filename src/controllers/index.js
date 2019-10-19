@@ -1,26 +1,24 @@
 // dependencies
 
+const sat = require('./../utils/Satellites');
+
 module.exports = {
     getIndex: function (req, res) {
         return res.status(200).send('ok')
     },
 
-    getSatPosition: function(req, res) {
+    getSatPosition: async function(req, res) {
 
         let userLat = req.params["userLat"]
         let userLong = req.params["userLong"]
 
-        // Call NY2O API
+        const satelliteList = ["25544", "36516", "33591", "29155", "25338", "28654", "25994", "27424", "38771", "37849"];
 
-        // Temp hardcoded values
-        let satLat = "19203.9213"
-        let satLong = "12.2312"
+        const satPositions = await sat.getSatelliteList(satelliteList, userLat, userLong)
 
-        let respJson = []
-
-        respJson.push({"model": "default", "userLat": satLat, "userLong": satLong})
-        respJson.push({"model": "default", "userLat": satLat, "userLong": satLong})
-
-        return res.status(200).json(respJson)
+        if (satPositions === []) {
+            return res.status(500).send()
+        }
+        return res.status(200).json(satPositions);
     }
 };

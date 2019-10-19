@@ -2,5 +2,7 @@
 require('dotenv').config();
 
 module.exports = {
-  PORT: process.env.PORT
+  PORT: process.env.PORT,
+  N2YO_API_KEY: process.env.N2YO_API_KEY,
+  NUMBER_OF_FRAMES: process.env.NUMBER_OF_FRAMES
 };
