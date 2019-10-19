@@ -11,7 +11,7 @@ module.exports = {
 
         let userLat = req.params["userLat"]
         let userLong = req.params["userLong"]
-        const userAlt = 0;
+        let userAlt = req.params["userAlt"]
 
         const satelliteList = ["25544", "36516", "33591", "29155", "25338", "28654", "25994", "27424", "38771", "37849"];
 
