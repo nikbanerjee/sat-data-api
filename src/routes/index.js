@@ -7,4 +7,8 @@ router
   .route('/')
   .get(Index.getIndex)
 
+router
+  .route('/satPositions/:userLat/:userLong')
+  .get(Index.getSatPosition)
+
 module.exports = router;
