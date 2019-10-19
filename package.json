@@ -2,11 +2,11 @@
   "name": "sat-data-api",
   "version": "1.0.0",
   "description": "Satellite data tracking with NY2O",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "node ./src/app.js",
     "test": "mocha || true",
-    "dev": "nodemon ./app.js"
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
