@@ -4,7 +4,8 @@
   "description": "Satellite data tracking with NY2O",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/app.js",
+    "test": "mocha || true"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,19 @@
   },
   "homepage": "https://github.com/nikbanerjee/sat-data-api#readme",
   "dependencies": {
+    "bluebird": "^3.7.1",
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
+    "mongoose": "^5.7.5",
+    "nodemon": "^1.19.4",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "supertest": "^4.0.2"
   }
 }
